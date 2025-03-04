@@ -1,8 +1,14 @@
 #LF 3.4.25
 
-class ANNModelBuilder(DataPreprocessing):
+from sklearn.neural_network import MLPClassifier
+import numpy as np
+from sklearn.metrics import accuracy_score
+
+from src.ANN_datapreprocessing import ANNDataPreprocessing
+
+class ANNModelBuilder(ANNDataPreprocessing):
     def __init__(self, *args, **kwargs):
-        super(ModelBuilder, self).__init__(*args, **kwargs)
+        super(ANNModelBuilder, self).__init__(*args, **kwargs)
 
     def ann(self, X_train, X_test, y_train, y_test):
         #create ANN model

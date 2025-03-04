@@ -1,5 +1,7 @@
 #LF 3.4.25
 
+import pandas as pd
+
 class ANNDataPreprocessing():
     def __init__(self):
         pass
